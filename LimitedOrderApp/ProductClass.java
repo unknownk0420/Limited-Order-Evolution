@@ -6,7 +6,7 @@ public class Product {
 
     public Product(String productName, int productPrice, int productQuantity) {
         this.productName = productName;
-        this.productPrice = Math.max(productPrice, 0);
+        this.productPrice = Math.max(productPrice, 0);//private와 Math.max를 활용하여 외부의 잘못된 조작으로부터 데이터를 보호
         this.productQuantity = productQuantity;
     }
 
