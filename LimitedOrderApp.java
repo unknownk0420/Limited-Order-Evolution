@@ -8,19 +8,13 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int productName = Integer.parseInt(st.nextToken());
+        String productName = st.nextToken();
         int productPrice = Integer.parseInt(st.nextToken());
         int productQuantity = Integer.parseInt(st.nextToken());
 
-        order(productQuantity);
+        Product product = new Product(productName, productPrice, productQuantity);
 
-    }
+        product.order();
 
-    private static void order(int productQuantity) {
-        if (productQuantity > 0) {
-            productQuantity--;
-        } else {
-            System.out.println("품절");
-        }
     }
 }
